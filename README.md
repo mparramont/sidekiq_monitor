@@ -56,6 +56,13 @@ Mount it at a customizable path in `routes.rb`:
 
     mount Sidekiq::Monitor::Engine => '/sidekiq'
 
+Changelog
+----
+- Updated show method in `queues_controller`
+    Queues query was updated to work in Rails 5 and major, because count method with finder options was
+    deprecated (i.e `Model.where(field: value).count(group: 'status')`) from Rails 4 in favor of new syntax
+    i.e `Model.where(field: value).group('status').count`.
+
 Usage
 -----
 

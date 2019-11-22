@@ -225,7 +225,7 @@ mount Sidekiq::Monitor::Engine => '/sidekiq', :constraints => AdminConstraint.ne
 
 Checks a `User` model instance that responds to `admin?`
 
-```
+```ruby
 # lib/admin_constraint.rb
 class AdminConstraint
   def matches?(request)
